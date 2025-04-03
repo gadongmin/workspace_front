@@ -1,0 +1,23 @@
+/*표 배경, 테두리*/
+table{
+    text-align: center;
+    border-top: 4px solid #aaa2a2;
+    border-bottom: 4px solid #aaa2a2;
+}
+
+thead{
+    background-color: rgb(220, 224, 227);
+}
+table>thead>tr>th{
+    border-bottom: 4px solid #aaa2a2;
+}
+table>tbody>tr>td{
+    border-bottom: 2px dotted #aaa2a2;
+}
+
+table>tbody>tr:hover{
+    background-color: #ffff00;
+}
+table>tfoot>tr:hover{
+    background-color: #ffff00;
+}
