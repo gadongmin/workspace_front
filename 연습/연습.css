@@ -1,0 +1,18 @@
+h1{color: #000000;, font-size: 21px;}
+h2{color: #0000ff;, font-size: 18px;}
+h3{color: #00ffff;, font-size: 15px;}
+.rk{color:#ff00ff;, font-size: 12px;}
+thead{
+    background-color: cornflowerblue;
+    color: #ffffff;
+    font-size: 20px;
+}
+.sk{
+    background-color:gray;
+    color: #00ff00;
+    font-size: 15px;
+}
+#ek{
+    color: rgb(92, 21, 245);
+    font-size: 20px;    
+}
