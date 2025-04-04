@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="ko"> <!-- 한국어문서만 검색할때, 음성으로 할때 한국어 음성지원 -->
+    <head>
+        <meta charset="UTF-8"> <!-- 브라우저가 문서를 해석할때 필요한 정보 -->
+        <title>스타일시트</title>
+        <!-- 스타일시트자리 -->
+        <style>
+            .btn-grey{
+                width: 130px;
+                height: 40px;
+                background-color: #bfbfbf;
+                border: 2px solid #000000;
+                border-radius: 5px;
+                
+                text-align: center;
+                font-size:20px;
+                line-height: 40px; /*글씨 중앙맞춤(정식적인 방법은 아님)*/
+                /*vertical-align: middle; - 블록에서 적용이 안됌*/
+            }        
+            .btn-grey:hover{
+                background-color: #a1a1a1;
+            }
+
+            .btn-blue{
+                width: 130px;
+                height: 40px;
+                background-color: #faef57;
+                border: 2px dashed #1e02b8;
+                border-radius: 5px;
+
+                text-align: center;
+                font-size: 20px;
+                line-height: 40px;
+            }       
+            .btn-blue:hover{
+                background-color: aqua;
+            }
+
+            .btn-red{
+                width: 130px;
+                height: 40px;
+                background-color: #ff0000;
+                border: 4px dotted #faef57;
+                border-radius: 5px;
+
+                color: #ffffff;
+                text-align: center;
+                font-size: 20px;
+                line-height: 40px;
+            }
+            .btn-red:hover{
+                background-color: gray;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="btn-grey">
+            저장버튼
+        </div>
+
+        <br><br>
+
+        <div class="btn-blue">
+            저장버튼
+        </div>
+
+        <br><br>
+
+        <div class="btn-red">
+            저장버튼
+        </div>
+
+        <br><br>
+
+        <form>
+            <label class="btn-grey" for="txt-rogin">아이디</label>
+            <input class="btn-red" id="txt-rogin" type="text" name="txt-rogin" value="" placeholder="아이디">
+            <button class="btn-blue" type="submit">로그인</button>
+        </form>
+        
+
+    </body>
+
+</html>

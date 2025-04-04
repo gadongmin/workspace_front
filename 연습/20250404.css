@@ -1,0 +1,42 @@
+*{
+    font-family: "맑은고딕";
+    font-size: 12px;
+}
+
+h1{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.bor-1{
+    box-sizing: border-box;
+    width: 700px;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 30px;
+}
+.b-size{
+    width: 60px;
+    height: 30px;
+}
+.p-left{
+    padding-left: 30px;
+}
+.p-right{
+    padding-right: 30px;
+}
+.b-left{
+    padding-left: 300px;
+}
+#t-area{
+    width: 600px;
+    height: 80px;
+}
+#t-label{
+    width: 520px;
+}
+#sel-1{
+    padding-left: 15px;
+}
+#txt-1{
+    padding-left: 55px;
+}

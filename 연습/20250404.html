@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <link rel="stylesheet" href="./20250404.css">
+    </head>
+    <body>
+        <h1>일반게시판</h1>
+        <h2>홈 > 게시판 > 일반게시판</h2>
+        <form action="" method="post">게시판 선택
+            <span id="sel-1">
+                <select name="게시판"> 
+                    <option value="">선택해주세요</option>
+                </select>
+            </span>
+        </form><br>
+
+        <form action="" method="post">제목
+            <span id="txt-1">
+                <label for="text"></label>
+                <input id="t-label" type="text" id="text" name="text" value="" placeholder="제목을 입력해주세요.">
+            </span>
+        </form><br>
+
+        <form action="" method="post">비밀번호
+            <span class="p-left">
+            <label for="password"></label>
+            <input type="password" id="password" name="password" value="" placeholder="패스워드를 입력하세요.">
+            </span>
+        </form><br>
+
+        <form action="" method="post">공개범위
+            <span class="p-left">        
+            <label for="rdo-1">본인</label>
+            <input type="radio" id="rdo-1" name="select" value="">
+            <label for="rdo-2">로그인회원</label>
+            <input type="radio" id="rdo-2" name="select" value="">
+            <label for="rdo-3">친구</label>
+            <input type="radio" id="rdo-3" name="select" value="">
+            <label for="rdo-4">전체</label>
+            <input type="radio" id="rdo-4" name="select" value="" checked="checked">
+            </span>
+        </form><br>
+        
+        <form action="" method="post">허용범위
+            <span class="p-left">        
+            <label for="ckb-1">댓글허용</label>
+            <input type="checkbox" id="ckb-1" name="select" value="" checked="checked>
+            <label for="ckb-2">답글허용</label>
+            <input type="checkbox" id="ckb-2" name="select" value="">
+            <label for="ckb-3">좋아요허용</label>
+            <input type="checkbox" id="ckb-3" name="select" value="">
+            <br><br>
+            <textarea id="t-area"></textarea>
+            </span>
+        </form><br>
+        
+            <form class="bor-1" method="post">첨부파일
+            <span class="p-left">        
+            <label for="file-1">파일선택</label>
+            <input type="file" id="file-1" name="file" value="">
+            </span>
+        </form><br>
+        
+        <span class="b-left">
+            <button class="b-size" type="submit">등록</button>
+        </span>
+        <span>
+            <button class="b-size" type="submit">초기화</button>
+        </span>
+    </body>
+</html>
