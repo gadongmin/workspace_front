@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/* 초기화 */
+body, div, 
+ol, ul, li, dl, dt,
+h1, h2, h3, h4, h5, h6, 
+form, input, select, textarea, button, fieldset, legend,
+p, table, tr, th, td{
+    margin: 0px; padding: 0px;
+}
+
+/* 바탕 */
+body{
+    background-color: #808080;
+    font-family: "맑은 고딕";
+    font-size: 12px;
+}
+
+/* 게시판순서 */
+ol>li{
+    list-style-type: none;
+    float: left;
+    padding-right: 20px;
+}
+ol>li::after{
+    content: ">";
+    padding: 5px;
+}
+ol>li:last-child::after{
+    content: "";
+}
+
+/* 게시판제목 */
+.wrap{
+    width: 700px;
+    background-color: #ffffff;
+}
+
+.wrap h3{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 공통 */
+.form-group{
+    margin-bottom: 10px;
+}
+
+.form-title{
+    display: inline-block;
+    width: 80px;
+}
+
+/* 게시판선택 */
+.form-group #sel-board{
+    width: 200px;
+}
+
+/* 제목 */
+#txt-title{
+    width: 600px;
+}
+
+/* 비밀번호 */
+#txt-pass{
+    width: 197px;
+}
+
+/* 공개, 허용범위 */
+.form-group input[type="radio"],
+.form-group input[type="checkbox"]{
+    margin-right: 10px;
+}
+
+/* 
+허용범위
+.form-group input[type="checkbox"]{
+    margin-right: 10px;
+}
+*/
+
+/* 글내용 */
+.form-group textarea{
+    width: 686px;
+    height: 70px;
+}
+
+/* 첨부파일 */
+
+/* 버튼 */
+.btn-group{
+    border-top: 2px solid #808080;
+    padding: 10px;
+    text-align: center;
+}
+
+.btn-group button{
+    width: 60px;
+    height: 30px;
+
+}

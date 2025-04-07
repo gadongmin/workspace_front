@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/* 초기화 */
+body, div, 
+ol, ul, li, dl, dt,
+h1, h2, h3, h4, h5, h6, 
+form, input, select, textarea, button, fieldset, legend,
+p, table, tr, th, td{
+    margin: 0px; padding: 0px;
+}
+
+body{
+    background-color: #808080;
+    font-family: "맑은 고딕";
+    font-size: 12px;
+}
+
+/* 바탕 */
+.wrap{
+    width: 600px;
+    background-color: #ffffff;
+}
+
+/* 메인제목 */
+h3{
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+/* 공통 */
+.form-group{
+    width: 600px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #000000;
+    padding: 10px 0px;
+}
+
+.form-title{
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* 나이 */
+.form-group>input[type="radio"]{
+    margin-right: 10px;
+}
+
+/* 자기소개 */
+#textarea{
+    width: 400px;
+    height: 100px;
+}
+
+/* 버튼 */
+.btn-group{
+    text-align: center;
+    padding: 10px;
+}
+.btn{
+    width: 120px;
+    padding: 10px 0px;
+}
