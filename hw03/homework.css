@@ -8,16 +8,43 @@ p, table, tr, th, td{
     margin: 0px; padding: 0px;
 }
 
+/* clearfix */
+.clearfix{*zoom:1;}
+.clearfix:before, .clearfix:after {display: block; content: ""; line-height: 0;}
+.clearfix:after {clear: both;}
+
+/* 바탕 */
 body{
     background-color: #808080;
     font-family: "맑은 고딕";
     font-size: 12px;
 }
 
-/* 바탕 */
+input, select, textarea{
+    font-family: "맑은고딕";
+    font-size: 15px;
+}
+
 .wrap{
     width: 600px;
     background-color: #ffffff;
+}
+
+/* 게시판순서 */
+.ol-group{
+    padding-bottom: 20px;
+}
+ol>li{
+    list-style-type: none;
+    float: left;
+    padding-right: 10px;
+}
+ol>li::after{
+    content: ">";
+    padding: 5px;
+}
+ol>li:last-child::after{
+    content: "";
 }
 
 /* 메인제목 */
@@ -32,7 +59,7 @@ h3{
     width: 600px;
     background-color: #ffffff;
     border-bottom: 1px solid #000000;
-    padding: 10px 0px;
+    padding: 20px 0px;
 }
 
 .form-title{
@@ -41,6 +68,19 @@ h3{
     text-align: center;
     font-size: 12px;
 }
+.form-font{
+    font-family: "맑은고딕";
+    font-size: 15px;
+}
+.input-padding{
+    margin-right: 10px;
+}
+
+/* 주소 */
+.add-magin{
+    padding-right: 235px;
+    margin: 5px 0px 0px 124px;
+}
 
 /* 나이 */
 .form-group>input[type="radio"]{
@@ -48,7 +88,8 @@ h3{
 }
 
 /* 자기소개 */
-#textarea{
+#txt-content{
+    vertical-align: top;
     width: 400px;
     height: 100px;
 }

@@ -8,6 +8,18 @@ p, table, tr, th, td{
     margin: 0px; padding: 0px;
 }
 
+input, select, textarea{
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* clearfix */
+.clearfix{*zoom:1;}
+.clearfix:before, .clearfix:after {display: block; content: ""; line-height: 0;}
+.clearfix:after {clear: both;}
+
+-------------------------------------------------------------------------------------------
+
 /* 바탕 */
 body{
     background-color: #808080;
@@ -16,6 +28,9 @@ body{
 }
 
 /* 게시판순서 */
+ol{
+    margin: 15px 0px; 
+}
 ol>li{
     list-style-type: none;
     float: left;
