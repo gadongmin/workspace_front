@@ -1,3 +1,6 @@
+@charset "UTF-8";
+/*********** MySite 공통 ***********/
+
 /* 레이아웃 */
 body{
     font-family: "맑은 고딕";
@@ -10,24 +13,38 @@ body{
     /* border: 1px solid #000; */
 }
 #header{
-    /* border: 1px solid #000; */
     padding: 10px 0px 10px 0px;
+    border-bottom: 1px solid #585858;
+    /* border: 1px solid #000; */
 }
 #nav{
-    border-top: 2px solid #e3e3e3;
-    border-right: none;
-    border-bottom: 2px solid #e3e3e3;
-    border-left: none;
+    padding: 10px 0px 10px 0px;
+    border-bottom: 1px solid #585858;
     /* border: 1px solid #000; */
 }
 #content{
+    padding: 40px 25px;
+    /* border: 1px solid #000; */
+}
+#content2{
+    padding: 20px 0px;
+    /* border: 1px solid #000; */
+}
+#content2 #aside{
+    width: 180px;
+    float: left;
+    margin-right: 20px;
+    /* border: 1px solid #000; */
+}
+#content2 #main{
+    width: 796px;
+    float: left;
     /* border: 1px solid #000; */
 }
 #footer{
-    height: 50px;
-    border: 1px solid #e3e3e3;
-    background-color: #e3e3e3;
-    text-align: center;
+    padding: 10px 0px;
+    background-color: #ddd;
+    /* border: 1px solid #000; */
 }
 /* 레이아웃 */
 
@@ -55,38 +72,64 @@ body{
 
 /* nav */
 #nav ul>li{
-    font-family: "맑은고딕";
-    font-size: 25px;
+    width: 250px;
+    float: left;
+    text-align: center;
+    font-size: 18px;
     font-weight: bold;
-    padding: 0px 60px;
-    margin: 15px 20px;
-    float:left
 }
 /* nav */
 
-/* content */
-#content-pic{
-    width: 300px;
-    height: 350px;
-    margin: 50px 20px 120px 30px;
-    float: left;
-}
-#content-txt{
-    padding: 45px 20px 0px 60px;
-}
-.content-bold{
-    font-size: 22px;
+/* content2(board-list) */
+#aside h2{
+    padding: 20px 60px;
+    /* width: 180px;
+    height: 60px;
+    line-height: 60px; 
+    text-align: center;
+    크기조절로 가운데 정렬*/
+    font-size: 20px;
     font-weight: bold;
-    padding-bottom: 8px;
+    background-color: #ddd;
 }
-.content-txt{
-    font-size: 22px;
-    padding-bottom: 8px;
+#aside ul>li{
+    padding: 8px 10px;
+    margin-top: 5px;
+    font-size: 15px;
+    border: 1px solid #a6a6a6;
 }
-/* content */
+#main #main-head{
+    padding: 15px 0px 10px 0px;
+    border-bottom: 1px solid #a6a6a6;
+}
+#main #main-head h3{
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+#main #main-head ol{
+    float: right;
+    margin-top: 10px;
+    /* background-color: aqua; */
+}
+#main #main-head ol>li{
+    float: left;
+    /* border: 1px solid #000; */
+}
+#main #main-head ol>li::after{
+    content: ">";
+    padding: 0px 3px;
+}
+#main #main-head ol>li:last-child::after{
+    content: "";
+    padding: 0px;
+}
+/* content(board-list) */
+
 
 /* footer */
-#footer-txt{
-    margin-top: 15px;
+#footer p{
+    text-align: center;
 }
 /* footer */
+/*********** MySite 공통 ***********/

@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/*********** 게시판 메인영역 ***********/
+table{
+    border-collapse: collapse;
+}
+/* 검색버튼 */
+#search{
+    margin: 20px 0px 5px 0px;
+    text-align: right;
+}
+#search>label{
+    border: 1px solid #b8a8a8;
+    background-color: #e8e8e8;
+    padding: 2px 5px;
+    border-radius: 2px;
+}
+/* 검색버튼 */
+
+/* 리스트 */
+table thead th{
+    padding: 10px 0px;
+    border-top: 2px solid #d3d2d2;
+    border-bottom: 2px solid #d3d2d2;
+    background-color: #e8e8e8;
+}
+
+table tbody td{
+    padding: 10px 0px;
+    border-bottom: 1px solid #e8e8e8;
+    text-align: center;
+}
+.th-left{
+    text-align: left;
+}
+/* 리스트 */
+
+/* 페이지 */
+#number-list{
+    padding: 0px 220px;
+    margin-top: 10px;
+}
+ol{
+    text-align: center;
+}
+ol>li{
+    padding: 0px 10px;
+    float: left;
+}
+/* 페이지 */
+
+/* 글쓰기버튼 */
+button{
+    padding: 2px 5px;s
+    margin-left: 742px;
+}
+/* 글쓰기버튼 */
+/*********** 게시판 메인영역 ***********/
+
+/*********** 게시판 읽기영역 ***********/
+/* 작성자 현황 */
+#read-board{
+    border-bottom: 1px solid #e8e8e8;
+}
+#read-board input[type="text"]{
+    margin: 10px 0px 10px 20px;
+}
+/* 작성자 현황 */
+
+/* 본문내용 */
+#read-txt{
+    padding: 0px 0px 10px 10px;
+    margin-top: 10px;
+    border-bottom: 1px solid #e8e8e8;
+}
+/* 본문내용 */
+/* <!-- 목록, 수정 --> */
+#list-change ul{
+    margin: 10px 0px 0px 670px;
+}
+#list-change ul>li{
+    padding: 2px 15px;
+    margin-left: 5px;
+    float: left;
+    background-color: #e8e8e8;
+    border-radius: 2px;
+    border: 1px solid #000;
+}
+/* <!-- 목록, 수정 --> */
+/*********** 게시판 읽기영역 ***********/
+
+/*********** 게시판 글쓰기영역 ***********/
+/* 제목 */
+#read-title input[type="text"]{
+    width: 743px;
+    margin: 10px 0px 10px 20px;
+}
+#read-content>textarea{
+    width: 796px;
+    height: 400px;
+}
+/* 제목 */
+/*********** 게시판 글쓰기영역 ***********/
+
+/*********** 게시판 수정영역 ***********/
+
+/*********** 게시판 수정영역 ***********/
