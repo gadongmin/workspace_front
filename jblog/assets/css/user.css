@@ -1,0 +1,89 @@
+@charset "UTF-8";
+/*********** 유저 로그인 ***********/
+/* 아이디 비밀번호 */
+#login{
+    width: 320px;
+    height: 240px;
+    padding: 30px 0px 0px 20px;
+    margin-left: 470px;
+    border: 1px solid #b8b8b8;
+}
+#login tr>td{
+    display: inline-block;
+    margin-top: 10px;
+}
+#login .login-1{
+    font-size: 15px;
+    width: 100px;
+    
+}
+#login .login-2{
+    width: 160px;
+    padding: 15px 0px;
+    border: 1px solid #000;
+}
+/* 아이디 비밀번호 */
+/* 안내메세지 */
+#login #login-message{
+    font-size: 15px;
+    padding: 0px 0px 35px 20px;
+    margin: 25px 20px 0px 0px;
+    border-bottom: 1px solid #858585;
+}
+/* 안내메세지 */
+/* 로그인,회원가입 버튼 */
+#login-button{
+    text-align: center;
+    padding: 10px 0px;
+    margin: 10px 30px 0px 30px;
+    border: 1px solid #828282;
+    border-radius: 2px;
+    background-color: #ddd;
+}
+/* 로그인, 회원가입 버튼 */
+/*********** 유저 로그인 ***********/
+/*********** 유저 회원가입 ***********/
+/* 공통 */
+#login-check{
+    width: 440px;
+    height: 300px;
+    padding-top: 30px;
+    margin-left: 410px;
+    border: 1px solid #b8b8b8;
+}
+.check-label{
+    display: inline-block;
+    font-size: 15px;
+    width: 100px;
+    margin: 15px 0px 0px 20px;
+    /* border: 1px solid #000; */
+}
+#login-check input[type="text"]{
+    height: 30px;
+}
+/* 공통 */
+/* 아이디 */
+#login-check button{
+    width: 100px;
+    height: 30px;
+    margin-left: 5px;
+}
+#login-check #check-ment{
+    font-size: 15px;
+    margin: 5px 0px 0px 125px;
+    /* border: 1px solid #000; */
+}
+/* 아이디 */
+/* 약관동의 */
+#login-check #check-consent-title{
+    display: inline-block;
+    width: 100px;
+}
+#login-check #check-consent{
+    font-size: 15px;
+    padding-bottom: 25px;
+    margin: 10px 20px;
+    border-bottom: 1px solid #828282;
+}
+/* 약관동의 */
+/*********** 유저 회원가입 ***********/

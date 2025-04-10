@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/*********** 메인***********/
+/* 검색창 */
+#content{
+    margin-left: 410px;
+}
+#content tr>td{
+    border: 2px solid #254EDB;
+}
+#content #search-1{
+    padding: 20px 210px;
+}
+#content #search-2{
+    font-size: 20px;
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #254EDB;
+}
+/* 검색창 */
+/* 검색항목 */
+#content #blog-sel{
+    font-size: 15px;
+    margin: 10px 0px 420px 105px;
+    /* border: 1px solid #000; */
+}
+#content #blog-sel input[type="radio"]{
+    margin-right: 15px;
+}
+/* 검색항목 */
+/*********** 메인***********/
