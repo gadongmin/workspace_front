@@ -3,22 +3,58 @@
 /*********** 회원가입 메인영역 ***********/
 
 /*********** 회원가입 입력 ***********/
+/* 공통 */
 #join{
-    width: 400px;
-    height: 300px;
+    width: 500px;
+    height: 350px;
     margin: 10px auto;
     border: 1px solid #9e9d9d;
 }
 form{
     padding: 40px 0px;
-    margin: 0px 80px;
+    margin: 5px 0px;
     /* border: 1px solid #000; */
 }
 .form-title{
     display: inline-block;
     width: 50px;
     text-align: right;
-    margin: 0px 20px 30px 0px;
+    margin: 4px 20px 30px 120px;
+    /* border: 1px solid #000; */
 }
+.join-1{
+    padding: 2px 10px 2px 0px;
+}
+/* 공통 */
+/* 아이디 */
+.join-id{
+    float: left;
+}
+#join-id{
+    margin-left: 4px;
+}
+#join-id-botton{
+    margin-left: 5px;
+}
+/* 아이디 */
+/* 회원가입 버튼 */
+#join-botton{
+    padding: 2px 15px;
+    margin: 10px 0px 0px 220px;
+}
+/* 회원가입 버튼 */
 /*********** 회원가입 입력 ***********/
+/*********** 회원정보수정 ***********/
+#userid{
+    font-weight: bold;
+}
+/*********** 회원정보수정 ***********/
+/*********** 로그인 ***********/
+#join-user{
+    width: 500px;
+    height: 220px;
+    margin: 10px auto;
+    border: 1px solid #9e9d9d;
+}
+/*********** 로그인 ***********/
 

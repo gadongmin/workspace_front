@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/*********** 메인페이지 사용 ***********/
+/*********** 메인페이지 사용 ***********/
+/* 이미지올리기 버튼 */
+#main button{
+    padding: 5px 18px;
+    margin: 15px 0px 15px 676px;
+    border: 1px solid #a7a7a7;
+    border-radius: 2px;
+    background-color: #e5e5e5;
+}
+/* 이미지올리기 버튼 */
+/* 사진 */
+.gellery-pic{
+    width: 186px;
+    float: left;
+    padding: 0px 0px 5px 5px;
+    margin: 0px 0px 5px 5px;
+    border: 1px solid #acacac;
+}
+.gellery-pic:last-child::after{
+    margin-left: 0px;
+}
+.gellery-img{
+    width: 181px;
+    margin: 0px 0px 10px 0px ;
+    
+}
+/* 사진 */
