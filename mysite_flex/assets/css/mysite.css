@@ -1,0 +1,139 @@
+@charset "UTF-8";
+/********** 레이아웃 **********/
+#wrap{
+    width: 1000px;
+    margin: 0px auto;
+    /* border: 5px solid #ff0000; */
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #a6a6a6;
+}
+nav{
+    padding: 10px 0px;
+    border-bottom: 1px solid #a6a6a6;
+}
+#connent{
+    /* border: 1px solid #000; */
+}
+footer{
+    font-size: 10px;
+    text-align: center;
+    padding: 15px 0px;
+    background-color: #ddd;
+    /* border: 1px solid #000; */
+}
+/********** 레이아웃 **********/
+
+/********** header **********/
+/* 로고 */
+header h1{
+    font-size: 36px;
+    font-weight: bold;
+    color: #77B308;
+    margin-bottom: 5px;
+}
+/* 로그인, 회원가입버튼 */
+header ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+header ul>li{
+    font-size: 10px;
+    padding: 3px 6px;
+    margin-left: 5px;
+    border: 1px solid #bfbfbf;
+    border-radius: 2px;
+}
+/********** header **********/
+/********** nav **********/
+/* 입사지원서~방명록 항목 */
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+nav ul>li{
+    width: 240px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+/********** nav **********/
+
+/********** connent **********/
+#connent #connent-as{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 20px;
+}
+/********** connent **********/
+
+/********** aside **********/
+aside{
+    width: 160px;
+}
+/* 사이드 배너 */
+#connent-user{
+    font-size: large;
+    font-weight: bold;
+    padding: 20px 60px;
+    /* border: 1px solid #000; */
+    background-color: #ddd;
+}
+#connent #connent-user-1>li{
+    padding: 5px 50px 5px 5px ;
+    margin-top: 5px;
+    border: 1px solid #a9a9a9;
+}
+/********** aside **********/
+
+/********** section **********/
+section{
+    width: 820px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding-bottom: 5px;
+    border-bottom: 1px solid #a9a9a9;
+}
+/* 섹션제목 */
+#user-join{
+    font-size: large;
+    font-weight: bold;
+    /* border: 1px solid #000; */
+    /* background-color: aqua; */
+}
+/* 섹션순서 */
+#connent #user-join-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+#connent #user-join-1>li{
+    font-size: 10px;
+    margin-top: 10px;
+    /* border: 1px solid #000; */
+}
+#connent #user-join-1>li::after{
+    content: ">";
+    margin: 0px 5px;
+}
+#connent #user-join-1>li:last-child:after{
+    content: "";
+    margin: 0px 0px;
+}
+/********** section **********/

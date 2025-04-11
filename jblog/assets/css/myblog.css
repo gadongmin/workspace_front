@@ -45,8 +45,8 @@ h1 a>img{
 /* footer */
 #footer{
     width: 1000px;
-    padding: 22px 30px 23px 30px;
-    margin: 40px 90px 20px 90px;
+    padding: 20px 30px 20px 30px;
+    margin: 40px 90px 0px 90px;
     background-color: #f0f0f0;
     /* border: 1px solid #000;     */
 }

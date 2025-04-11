@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/********** article **********/
+#article{
+    width: 520px;
+    height: 340px;
+    border: 1px solid #000;
+    background-color: aqua;
+}
+#article .label-txt{
+    display: inline-block;
+    width: 80px;
+    padding: 5px 0px;
+    border: 1px solid #000;
+}
+#article input[type="text"]{
+    width: 140px;
+    padding: 5px 0px;
+    border-radius: 2px;
+    font-size: small;
+}
+/********** article **********/
