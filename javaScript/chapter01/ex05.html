@@ -1,0 +1,71 @@
+<html long="ko">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+
+</head>
+
+<body>
+    <h1>자바스크립트</h1>
+
+    <script>
+        console.log("=======================================");
+        console.log('# switch case문');
+
+        let code = window.prompt('과목을 입력해주세요');
+        console.log(code);
+        /* 문자열로 인식
+        switch(code){
+            case '1': 
+                console.log('R 101호');
+                break;
+
+            case '2': 
+                console.log('R 202호');
+                break;
+            
+            case '3': 
+                console.log('R 303호');
+                break;
+            
+            case '4': 
+                console.log('R 404호');
+                break;
+
+            default:
+                console.log('상담원에게 문의하세요.');
+                break;
+        }
+        */
+
+        // 숫자형로 변형
+        let no = Number.parseInt(code);
+        console.log(typeof no);
+
+        switch (no) {
+            case 1:
+                console.log('R 101호');
+                break;
+
+            case 2:
+                console.log('R 202호');
+                break;
+
+            case 3:
+                console.log('R 303호');
+                break;
+
+            case 4:
+                console.log('R 404호');
+                break;
+
+            default:
+                console.log('상담원에게 문의하세요.');
+                break;
+        }
+    </script>
+</body>
+
+</html>

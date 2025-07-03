@@ -1,0 +1,33 @@
+<html long="ko">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+
+</head>
+
+<body>
+    <h1>자바스크립트</h1>
+
+    <script>
+        console.log("=======================================");
+        console.log('# 기명함수와 익명함수이름이 같을때');
+
+        /* # 호이스팅
+        let은 조사대상이 아니지만, var은 조사대상에 포함된다.
+        */
+        var test = function () { // 첫번째에는 무시당하고 변수로 test에 정의된다.
+            console.log("testA함수 입니다.");
+        }
+
+        function test() { // 첫번째로 정의된다.
+            console.log("testB함수 입니다.");
+        }
+
+        test(); // 변수var로 정의되어 "console.log("testA함수 입니다.");" 이것으로 출력된다.
+
+    </script>
+</body>
+
+</html>

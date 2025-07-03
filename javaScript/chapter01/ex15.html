@@ -1,0 +1,41 @@
+<html long="ko">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+
+</head>
+
+<body>
+    <h1>자바스크립트</h1>
+
+    <script>
+        console.log("=======================================");
+        console.log('# 사용자정의 객체');
+
+        // GuestbookVO guestbookVO = new GuestbookVO(parameter);
+
+        let guestbookVO = { // 객체안에서는 값은 넣는 표기를 '=' → ':' 기호로 사용한다.
+            name: '정우성',
+            password: '123',
+            content: '방명록 내용',
+            showInfo: function () {
+                console.log('******************************');
+                console.log('방문자: ' + this.name);
+                console.log('방명록: ' + this.content);
+                console.log('******************************');
+            }
+        };
+
+        console.log(guestbookVO.name);
+        console.log(guestbookVO['name']); // 문자열로 표현
+        console.log(guestbookVO.password);
+        console.log(guestbookVO.content);
+
+        guestbookVO.showInfo();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<html long="ko">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+
+</head>
+
+<body>
+    <h1>자바스크립트</h1>
+
+    <script>
+        console.log("=======================================");
+        console.log('# 리스트 개념');
+
+        let shape = [];
+
+        // VO
+        let triangle = {
+            name: 'triangle',
+            width: 5,
+            heigh: 10,
+            area: function () {
+                console.log('삼각형의 넚이는 = ' + this.width * this.heigh / 2);
+            }
+
+        };
+
+        let Rectangle = {
+            name: 'Rectangle',
+            width: 5,
+            heigh: 5,
+            area: function () {
+                console.log('사각형의 넚이는 = ' + this.width * this.heigh);
+            }
+        };
+
+        let Circle = {
+            name: 'Circle',
+            radius: 5,
+            area: function () {
+                console.log('원의 넚이는 = ' + 3.14 * (this.radius * this.radius));
+
+            }
+        };
+
+        shape.push(triangle);
+        shape.push(Rectangle);
+        shape.push(Circle);
+
+        for (let i = 0; i < shape.length; i++) {
+            shape[i].area();
+        }
+
+    </script>
+</body>
+
+</html>
