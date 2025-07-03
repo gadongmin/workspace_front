@@ -1,0 +1,93 @@
+<html long="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript</title>
+  </head>
+
+  <body>
+    <h1>자바스크립트</h1>
+
+    <script>
+      console.log("=================================");
+      console.log("변수선언");
+      // int no = 3; 자바기준
+      var no = 3;
+      var str = "안녕하세요";
+      var boo = 3 > 5;
+      var year, month, day;
+      year = "2025";
+      console.log(year);
+
+      let no2 = 3;
+      let str2 = "안녕하세요";
+      let boo2 = 3 > 5;
+      let year2, month2, day2;
+      year2 = "2025";
+      console.log(year2);
+
+      console.log("=================================");
+      var name = "유재석";
+      console.log(name);
+
+      var name = "정우성"; // 같은이름변수 선언(덮어씀)
+      console.log(name);
+
+      console.log("=================================");
+      let name2 = "유재석";
+      console.log(name2);
+
+      // let name2 = "정우성"; // 같은이름변수 중복오류
+      // console.log(name2);
+
+      //let 사용권장
+
+      console.log("=================================");
+      console.log("상수선언 const");
+      const PI = 3.14; // 상수는 대문자로 표기
+      // PI = 3.141592;, 변경 시도 오류
+      console.log(PI);
+
+      /* 상수는 선언 동시에 값을 넣어줘야한다.
+      const MAX;
+      MAX = 3;
+      */
+
+      console.log("=================================");
+      console.log("# 값 대입시 자료형이 자동으로 결정된다.");
+      let data;
+      console.log(typeof data); // undefined
+
+      data = 15;
+      console.log(typeof data); // number
+
+      data = "안녕하세요";
+      console.log(typeof data); // string
+
+      data = 5 > 3;
+      console.log(typeof data); // boolean
+
+      console.log("=================================");
+      console.log("# undefined vs null");
+      let myVar1; // undefined: 한번도 값이 들어가지 않았던 의미
+      let myVar2 = null; //null: 정의된 값을 없애라는 의미
+
+      console.log(myVar1);
+      console.log(myVar2);
+
+      console.log("=================================");
+      console.log("# ==(동등연산자) vs ===(일치연산자)");
+
+      console.log("123" == 123); // 자료형이 달라도 같다고 나옴
+      console.log("123" === 123); // 자료형까지 같아야 같다고 나옴
+
+      console.log(myVar1 == null); // undefined == null : true
+      console.log(myVar1 === null); // undefined === null : false
+
+      console.log("" == false); // true
+      console.log("" === false); // false
+
+      console.log("" == 0); // true
+      console.log("" === 0); // false
+    </script>
+  </body>
+</html>
