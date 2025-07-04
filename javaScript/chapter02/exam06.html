@@ -24,7 +24,6 @@
 		document.addEventListener('DOMContentLoaded', function () {
 			console.log('돔트리 완료, 페인팅 완료 전');
 
-
 			// <input id="txt-userId" class="form-txt" type="text" name="userId" value="jung" placeholder="아이디를 입력해주세요">
 			// id="txt-userId" → id="t-Id"
 			let tag01 = document.querySelector('#txt-userId');
@@ -55,7 +54,7 @@
 			tag02.href = 'https://www.google.com';
 			console.log(tag02.href);
 			// target="_blank" → target="_blank" 
-			tag02.target = '_blank';
+			tag02.target = '_self';
 			console.log(tag02.target);
 
 		});

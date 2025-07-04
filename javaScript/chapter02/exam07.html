@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<link href="" rel="stylesheet">
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link href="" rel="stylesheet">
 
 </head>
 
@@ -16,7 +17,7 @@
 			<li id="guestbook">방명록</li>
 		</ul>
 	</div>
-	
+
 	<div id="content">
 		<p class="red">내용1입니다.</p>
 
@@ -50,9 +51,65 @@
 		</tbody>
 	</table>
 
-</body>
+	<!-- ----------------------------------------------------- -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			console.log('돔트리 완료, 페인팅 완료 전');
 
-<script>
-</script>
+			// <h1 id="logo">자바스크립트</h1>
+			let tag01 = document.querySelector('h1');
+			console.log(tag01);
+			console.log(tag01.parentElement);
+			console.log(tag01.parentElement.parentElement);
+
+			// <p class="red">내용1입니다.</p>
+			console.log('-----------------------------------------');
+			let tag02 = document.querySelector('.red');
+			console.log(tag02);
+			console.log(tag02.parentElement);
+			console.log(tag02.parentElement.id);
+
+			/*
+			<tr id="n-3">
+				<td>박명수</td>
+				<td id="h-3">010-3333-3333</td>
+				<td>02-3333-3333</td>
+			</tr>
+			
+			let tag03 = document.querySelector('#n-3');
+			console.log(tag03);
+			console.log(tag03.parentElement); // body
+			*/
+			let tag03 = document.querySelector('#n-3').parentElement;
+			console.log(tag03);
+			console.log(tag03.parentElement); // table
+
+			console.log('-----------------------------------------');
+			/*
+			<tr id="n-2">
+				<td>이효리</td>
+				<td id="h-2">010-2222-2222</td>
+				<td>02-2222-2222</td>
+			</tr>
+			*/
+			let tag04 = document.querySelector('#n-2');
+			// id 출력
+			console.log(tag04.id);
+			// 이효리 이름 출력
+			console.log(tag04.children[0].innerText);
+			console.log(tag04.firstElementChild.innerText);
+			// 이효리 회사번호 출력
+			console.log(tag04.children[2].innerText);
+			console.log(tag04.lastElementChild.innerText);
+
+			let tag05 = document.querySelector('#h-2');
+			// 정우성 회사번호 출력
+			console.log(tag05.parentElement.previousElementSibling.lastElementChild.innerText);
+			// 박명수 이름 출력
+			console.log(tag05.parentElement.nextElementSibling.firstElementChild.innerText);
+
+		});
+	</script>
+</body>
 
 </html>
