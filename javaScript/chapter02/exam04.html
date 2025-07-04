@@ -75,6 +75,11 @@
 				liTags[i].style.color = '#0000ff';
 			}
 
+			// 태그 안에 속성값에 적용
+			let txtTag = document.querySelector('input[name="userId"]');
+			console.log(txtTag);
+			txtTag.style.color = '#ff0000';
+
 			// - 여러 요소
 			console.log('------------------------------------');
 			let lilaTags = document.querySelectorAll('#nav ul > li, label');
