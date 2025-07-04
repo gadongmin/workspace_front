@@ -14,34 +14,34 @@
         console.log("=======================================");
         console.log('# 리스트 개념');
 
+        // 배열(리스트)
         let shape = [];
 
         // VO
         let triangle = {
-            name: 'triangle',
+            name: '삼각형',
             width: 5,
             heigh: 10,
             area: function () {
-                console.log('삼각형의 넚이는 = ' + this.width * this.heigh / 2);
+                console.log(this.name + '의 넚이는 = ' + this.width * this.heigh / 2);
             }
 
         };
 
         let Rectangle = {
-            name: 'Rectangle',
+            name: '사각형',
             width: 5,
             heigh: 5,
             area: function () {
-                console.log('사각형의 넚이는 = ' + this.width * this.heigh);
+                console.log(this.name + '의 넚이는 = ' + this.width * this.heigh);
             }
         };
 
         let Circle = {
-            name: 'Circle',
+            name: '원',
             radius: 5,
             area: function () {
-                console.log('원의 넚이는 = ' + 3.14 * (this.radius * this.radius));
-
+                console.log(this.name + '의 넚이는 = ' + 3.14 * (this.radius * this.radius));
             }
         };
 
