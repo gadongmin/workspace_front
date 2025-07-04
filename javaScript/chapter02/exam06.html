@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<link href="" rel="stylesheet">
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link href="" rel="stylesheet">
 
 </head>
 
@@ -17,11 +18,49 @@
 
 	<p id="p01">문장1</p>
 	<p id="p02">문장2</p>
+
+	<!-- ------------------------------------------------------------------------- -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			console.log('돔트리 완료, 페인팅 완료 전');
+
+
+			// <input id="txt-userId" class="form-txt" type="text" name="userId" value="jung" placeholder="아이디를 입력해주세요">
+			// id="txt-userId" → id="t-Id"
+			let tag01 = document.querySelector('#txt-userId');
+			console.log(tag01);
+			tag01.id = 't-Id';
+			console.log(tag01.id);
+			// class="form-txt" → class="f-txt" 
+			tag01.class = 'f-txt';
+			console.log(tag01.class);
+			// type="text" → type="password"
+			tag01.type = 'password';
+			console.log(tag01.type);
+			// value="jung"  → value="정우성"
+			tag01.value = '정우성';
+			console.log(tag01.value);
+			// input  → div
+			tag01.tagName = 'DIV';
+			console.log(tag01.tagName); // tagName(요소)는 변경되지 않는다.
+
+			// 실습
+			// <a href="https://www.naver.com" target="_blank">네이버</a>
+			let tag02 = document.querySelector('a');
+			console.log(tag02);
+			// 네이버 → 구글 
+			tag02.innerText = '구글';
+			console.log(tag02.innerText);
+			// href="https://www.naver.com" → href="https://www.google.com" 
+			tag02.href = 'https://www.google.com';
+			console.log(tag02.href);
+			// target="_blank" → target="_blank" 
+			tag02.target = '_blank';
+			console.log(tag02.target);
+
+		});
+
+	</script>
 </body>
-
-<script>
-
-
-</script>
 
 </html>

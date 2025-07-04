@@ -66,7 +66,13 @@
 			console.log(navTag);
 			navTag.style.color = '#00ff00';
 
+			// 태그 안에 속성값에 적용
+			let txtTag = document.querySelector('input[name="userId"]');
+			console.log(txtTag);
+			txtTag.style.color = '#ff0000';
 
+
+			console.log('------------------------------------');
 			// 요소() 여러개 가져오기
 			// - tag요소 안에 여러개
 			let liTags = document.querySelectorAll('li'); // 요소가 1개여도 배열로 가져온다.
@@ -75,18 +81,21 @@
 				liTags[i].style.color = '#0000ff';
 			}
 
-			// 태그 안에 속성값에 적용
-			let txtTag = document.querySelector('input[name="userId"]');
-			console.log(txtTag);
-			txtTag.style.color = '#ff0000';
-
 			// - 여러 요소
-			console.log('------------------------------------');
 			let lilaTags = document.querySelectorAll('#nav ul > li, label');
 			console.log(lilaTags);
 			for (let i = 0; i < lilaTags.length; i++) {
 				lilaTags[i].style.color = '#00ff00';
 			}
+
+			// 마지막 li요소를 빨강으로
+			/*
+			let liEls = document.querySelectorAll('li');
+			console.log(liEls);
+			liEls[liEls.length - 1].style.color = 'ff0000';
+			*/
+			let liEl = document.querySelector('li:last-child');
+			liEl.style.color = '#ff0000';
 		});
 
 	</script>
