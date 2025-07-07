@@ -1,41 +1,39 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
 
-<style>
-	.box-red{
-		width: 300px;
-		width: 300px;
-		background-color: #ff0000;
-	}
+	<style>
+		.box-red {
+			width: 300px;
+			width: 300px;
+			background-color: #ff0000;
+		}
 
-	.box-blue{
-		width: 500px;
-		width: 500px;
-		background-color: #0000ff;
-	}
+		.box-blue {
+			width: 500px;
+			width: 500px;
+			background-color: #0000ff;
+		}
 
+		.bold {
+			font-weight: bold;
+		}
 
-	.bold{
-		font-weight: bold;
-	}
+		.italic {
+			font-style: italic;
+		}
 
-	
-	.italic{
-		font-style: italic;
-	}
+		.size50 {
+			font-size: 50px;
+		}
 
-	.size50{
-		font-size: 50px;
-	}
-
-	.size20{
-		font-size: 20px;
-	}
-
-</style>
+		.size20 {
+			font-size: 20px;
+		}
+	</style>
 
 
 </head>
@@ -46,14 +44,28 @@
 		어서모이자<br>
 		선생님이 우리를<br>
 		기다리신다<br>
-	<div>
-	
+	</div>
 
+
+	<!-- ------------------------------------------------------ -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			console.log('돔트리 완료');
+
+			let divTag = document.querySelector('div');
+			console.log(divTag);
+			console.log(divTag.className);
+			console.log(divTag.classList);
+
+			// box-red를 box-blue로 변경
+			divTag.classList.remove('box-red'); // 삭제
+			divTag.classList.add('box-blue');	// 추가
+
+			// 글씨체 bold를 italic으로 변경
+			divTag.classList.replace('bold', 'italic');
+		});
+
+	</script>
 </body>
-
-<script>
-
-	
-</script>
 
 </html>

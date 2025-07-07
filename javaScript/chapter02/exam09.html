@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<link href="" rel="stylesheet">
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link href="" rel="stylesheet">
 
 </head>
 
@@ -16,12 +17,38 @@
 		<li>다섯번째아이템입니다.</li>
 		<li>여섯번째아이템입니다.</li>
 	</ul>
-	
 
+	<!-- -------------------------------------------------------- -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			console.log('돔트리 완료, 페인팅 완료 전');
+
+			// html 가져오기
+			let ulTag = document.querySelector('ul')
+
+			// css 적용
+			ulTag.style.fontSize = '40px'; // 폰트사이즈
+			ulTag.style.border = '1px solid #ff0000'; // 테두리
+
+			ulTag.firstElementChild.style.fontFamily = '궁서'; // 글씨체
+			ulTag.firstElementChild.style.backgroundColor = '#00ff00'; // 배경색
+			ulTag.firstElementChild.style.width = '400px'; // 가로
+			ulTag.firstElementChild.style.padding = '10px 20px 30px 40px'; // 패딩
+			ulTag.firstElementChild.style.marginLeft = '40px'; // 마진
+
+			ulTag.lastElementChild.style.borderWidth = '5px'; // 선 두께
+			ulTag.lastElementChild.style.borderStyle = 'dotted'; // 선 모양
+			ulTag.lastElementChild.style.borderColor = '#ff0000'; // 선 색
+
+			ulTag.style.listStyleType = 'none'; // 리스트 볼릿 제거
+
+			// p1을 빨간색으로 변경
+			let p01Tag = document.querySelector('#p01');
+			p01Tag.style.color = '00ff00';
+			// 한줄로 표기
+			document.querySelector('#p01').style.color = '00ff00';
+		});
+	</script>
 </body>
-
-<script>
-
-</script>
 
 </html>

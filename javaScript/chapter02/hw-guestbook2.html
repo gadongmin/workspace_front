@@ -1,22 +1,21 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang="ko">
+
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
 
-<style>
-
-</style>
-
-
+	<style> </style>
 </head>
 
 <body>
-    <div>
+	<div>
 		<table border="1" width="540px">
 			<tr>
-				<td>이름</td><td><input type="text" name="name"></td>
-				<td>비밀번호</td><td><input type="password" name="pw"></td>
+				<td>이름</td>
+				<td><input type="text" name="name"></td>
+				<td>비밀번호</td>
+				<td><input type="password" name="pw"></td>
 			</tr>
 			<tr>
 				<td colspan="4"><textarea cols="72" rows="5" name="content"></textarea></td>
@@ -28,19 +27,35 @@
 	</div>
 	<br>
 
+	<!-- ---------------------------------------------------------- -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			console.log('돔트리 완료');
+
+			// 버튼호출
+			let btnTag = document.querySelector('#btnWrite');
+			btnTag.addEventListener('click', function () {
+
+				// 데이터 추출
+				let nameTag = document.querySelector('input[name = "name"]');
+				let pwTag = document.querySelector('input[name = "pw"]');
+				let contentTag = document.querySelector('textarea[name = "content"]');
+
+				let name = nameTag.value;
+				let pw = pwTag.value;
+				let content = contentTag.value;
+
+				let guestVO = {
+					name: name
+					, pw: pw
+					, content: content
+				};
+
+				console.log(guestVO);
+
+			});
+		});
+	</script>
 </body>
-
-<script>
-
-
-
-
-
-
-
-
-
-
-</script>
 
 </html>

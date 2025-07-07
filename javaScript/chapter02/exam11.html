@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
 
-<style>
-	.box-red{
-		width: 300px;
-		width: 300px;
-		background-color: #ff0000;
-	}
+	<style>
+		.box-red {
+			width: 300px;
+			width: 300px;
+			background-color: #ff0000;
+		}
 
-	.box-blue{
-		width: 500px;
-		width: 500px;
-		background-color: #0000ff;
-	}
+		.box-blue {
+			width: 500px;
+			width: 500px;
+			background-color: #0000ff;
+		}
 
 
-	.bold{
-		font-weight: bold;
-	}
+		.bold {
+			font-weight: bold;
+		}
 
-	
-	.italic{
-		font-style: italic;
-	}
 
-	.size50{
-		font-size: 50px;
-	}
+		.italic {
+			font-style: italic;
+		}
 
-	.size20{
-		font-size: 20px;
-	}
+		.size50 {
+			font-size: 50px;
+		}
 
-</style>
+		.size20 {
+			font-size: 20px;
+		}
+	</style>
 
 
 </head>
@@ -45,7 +45,7 @@
 	<!-- 문자열 변경 -->
 	<p id="p1"> abcdefghijklmn </p>
 	<p id="p2"> 학교종이 땡땡땡 abcdefg </p>
-	
+
 
 	<p id="p3"> abcdefghijklmn </p>
 	<p id="p4"> 학교종이 땡땡땡<br> abcdefg </p>
@@ -60,11 +60,31 @@
 	<p id="p13">문장1</p>
 	<p id="p14">문장2</p>
 
+	<!-- ------------------------------------------------------- -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			console.log('돔트리 완료');
 
+			let p11Tag = document.querySelector('#p11');
+			console.log(p11Tag);
+			console.log(p11Tag.innerHTML);
+			// console.log(p11Tag.innerText);, textContent로 사용
+			console.log(p11Tag.textContent);
 
+			let p13Tag = document.querySelector('#p13');
+			// console.log(p13Tag);
+			p13Tag.textContent = '<strong>가나다라마바사아자차카타파하</strong>'; // html 글자로 출력
+
+			let p14Tag = document.querySelector('#p14');
+			// console.log(p14Tag);
+			p14Tag.innerHTML = '<strong>가나다라마바사아자차카타파하</strong>'; // html 글자에 반영
+
+			// 요소의 값(content)을 제거
+			let p01Tag = document.querySelector('#p1');
+			// console.log(p01Tag);
+			p01Tag.textContent = '';
+		});
+	</script>
 </body>
-
-<script>
-</script>
 
 </html>

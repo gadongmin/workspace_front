@@ -1,29 +1,63 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
 
-<style>
+    <style>
 
-</style>
+    </style>
 
 
 </head>
 
 <body>
     <div>
-        <input id="left" type="text" value=""> 
-        + 
-        <input id="right" type="text" value=""> 
+        <input id="left" type="text" value="">
+        +
+        <input id="right" type="text" value="">
         <br>
-        <button id="btnPlus" type="button" >더하기</button>
+        <button id="btnPlus" type="button">더하기</button>
         <p id="display">0</p>
     </div>
+
+    <!-- --------------------------------------------------------- -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('돔트리 완료');
+
+            // 버튼호출
+            let btnTag = document.querySelector('#btnPlus');
+            // console.log(btnPlus);
+
+            // 이벤트 호출 시 실행
+            btnTag.addEventListener('click', function () {
+
+                // tag 가져오기
+                let leftTag = document.querySelector('#left');
+                let rightTag = document.querySelector('#right');
+                let pTag = document.querySelector('#display');
+
+                // 첫번째 값(숫자로 변환)
+                let leftNo = Number.parseInt(leftTag.value);
+
+                // 두번째 값(숫자로 변환)
+                let rightNo = Number.parseInt(rightTag.value);
+
+                // 첫번째 값 + 두번째 값
+                let sum = leftNo + rightNo;
+
+                // p요소에 결과값 적용
+                pTag.innerHTML = sum;
+
+                // 입력창 리셋
+                leftTag.value = '';
+                rightTag.value = '';
+            });
+
+        });
+    </script>
 </body>
-
-<script>
-
-</script>
 
 </html>

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<link href="" rel="stylesheet">
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link href="" rel="stylesheet">
 
 </head>
 
@@ -16,7 +17,7 @@
 			<li id="guestbook">방명록</li>
 		</ul>
 	</div>
-	
+
 	<div id="content">
 		<p class="red">내용1입니다.</p>
 
@@ -50,9 +51,42 @@
 		</tbody>
 	</table>
 
+	<!-- -------------------------------------------------------- -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			console.log('돔트리 완료, 페인팅 완료 전');
+
+			let personList = []; // 배열
+
+			let trTags = document.querySelectorAll('tbody>tr');
+			// console.log(trTags);
+			// console.log(trTags[0].children[0].innerText);
+			// console.log(trTags[0].children[1].innerText);
+			// console.log(trTags[0].children[2].innerText);
+
+			// 데이터 추출
+			for (let i = 0; i < trTags.length; i++) {
+				let name = trTags[i].children[0].innerText;
+				let hp = trTags[i].children[1].innerText;
+				let compony = trTags[i].children[2].innerText;
+
+				// 객체
+				let personVO = {
+					name: name
+					, hp: hp
+					, compony: compony
+				};
+
+				//객체(VO)를 배열에 추가한다.
+				personList.push(personVO);
+			}
+
+			console.log(personList);
+		});
+
+	</script>
 </body>
 
-<script>
-</script>
+
 
 </html>
