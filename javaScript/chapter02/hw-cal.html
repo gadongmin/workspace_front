@@ -61,8 +61,6 @@
 					let value = this.textContent;
 
 					disTag.value = disTag.value + value;
-					numList = disTag.value.split('');
-					console.log(numList);
 
 					if (value === 'C') {
 						disTag.value = '';
@@ -79,25 +77,25 @@
 						}
 
 						if (disTag.value.includes('-')) {
-							let plus = disTag.value.split('-');
-							let num1 = Number.parseInt(plus[0]);
-							let num2 = Number.parseInt(plus[1]);
+							let minus = disTag.value.split('-');
+							let num1 = Number.parseInt(minus[0]);
+							let num2 = Number.parseInt(minus[1]);
 
 							disTag.value = num1 - num2;
 						}
 
 						if (disTag.value.includes('*')) {
-							let plus = disTag.value.split('*');
-							let num1 = Number.parseInt(plus[0]);
-							let num2 = Number.parseInt(plus[1]);
+							let multi = disTag.value.split('*');
+							let num1 = Number.parseInt(multi[0]);
+							let num2 = Number.parseInt(multi[1]);
 
 							disTag.value = num1 * num2;
 						}
 
 						if (disTag.value.includes('/')) {
-							let plus = disTag.value.split('/');
-							let num1 = Number.parseInt(plus[0]);
-							let num2 = Number.parseInt(plus[1]);
+							let div = disTag.value.split('/');
+							let num1 = Number.parseInt(div[0]);
+							let num2 = Number.parseInt(div[1]);
 
 							disTag.value = num1 / num2;
 						}

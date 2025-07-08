@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>자바스크립트</title>
+	<style>
+		ul {
+			background-color: #ff00ff;
+			padding: 10px;
+			width: 300px;
+		}
+
+		ul>li {
+			border: 1px solid #000000;
+			background-color: hsl(0, 0%, 100%);
+		}
+	</style>
+</head>
+
+<body>
+	<ul>
+		<li>1번째 아이템 입니다.</li>
+		<li>2번째 아이템 입니다.</li>
+		<li>3번째 아이템 입니다.</li>
+		<li>4번째 아이템 입니다.</li>
+		<li>5번째 아이템 입니다.</li>
+		<li>6번째 아이템 입니다.</li>
+		<li>7번째 아이템 입니다.</li>
+		<li>8번째 아이템 입니다.</li>
+		<li>9번째 아이템 입니다.</li>
+		<li>10번째 아이템 입니다.</li>
+	</ul>
+	<!-- --------------------------------------------------------- -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			console.log('돔트리 완료');
+
+			let liTags = document.querySelectorAll('li');
+			console.log(liTags);
+
+			for (let i = 0; i < liTags.length; i++) {
+				liTags[i].addEventListener('click', function (event) {
+					console.log(i + '버튼클릭');
+
+					this.remove();				// 삭제
+					// this.textContent = '';	// 비움
+
+					console.log(this); 			// EventListener가 있는 태그 요소
+					console.log(event.target);  // 사용자가 실제로 클릭한 태그 요소
+				});
+			}
+
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>자바스크립트</title>
+	<style>
+		ul {
+			background-color: #ff00ff;
+			padding: 10px;
+			width: 300px;
+		}
+
+		ul>li {
+			border: 1px solid #000000;
+			background-color: hsl(0, 0%, 100%);
+		}
+	</style>
+</head>
+
+<body>
+	<ul>
+		<li>첫번째 아이템 입니다.</li>
+		<li>두번째 아이템 입니다.</li>
+		<li>세번째 아이템 입니다.</li>
+		<li>네번째 아이템 입니다.</li>
+		<li>다섯번째 아이템 입니다.</li>
+	</ul>
+
+	<button id="btn-before" type="button">앞에추가</button>
+	<button id="btn-after" type="button">뒤에추가</button>
+	<!-- --------------------------------------------------------- -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			console.log('돔트리 완료');
+
+			let btnAfter = document.querySelector('#btn-after');
+			btnAfter.addEventListener('click', function () {
+				console.log(btnAfter + '버튼');
+
+				let ulTag = document.querySelector('ul');
+				let strHtml = '<li>뒤에 추가된 아이템입니다.</li>';
+				ulTag.insertAdjacentHTML('beforeend', strHtml);
+
+
+				/*	'뒤에추가' 버튼을 클릭해야 실행됨(오류)
+				let ulTags = document.querySelectorAll('ul');
+				for (let i = 0; i < ulTags.length; i++) {
+					ulTags[i].addEventListener('click', function (event) {
+						event.target.remove();
+					});
+				}
+				*/
+			});
+
+			let ulTag = document.querySelector('ul');
+			ulTag.addEventListener("click", function (event) {
+				console.log(ulTag + '버튼');
+
+				console.log(this);
+				console.log(event.target);
+				console.log(event.target.tagName);
+
+				if (event.target.tagName == 'LI') {
+					console.log('li태그 클릭');
+					event.target.remove();
+				}
+			});
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>자바스크립트</title>
+	<style>
+		div {
+			width: 400px;
+			border: 1px solid #000000;
+		}
+
+		p {
+			border: 1px solid #000000;
+			background-color: #ff00ff;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div>
+		(before-begin)
+		<p id="p01">
+			(after-begin)
+			마바사아자차카타파하
+			(before-end)
+		</p>
+		(after-end)
+	</div>
+
+
+
+	<!-- --------------------------------------------------------- -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			console.log('돔트리 완료');
+
+			let p01Tag = document.querySelector('#p01');
+			console.log(p01Tag);
+
+			// 컨텐츠 영역 내용 변경
+			// p01Tag.innerHTML = '가나다라';
+
+			// 컨텐츠 영역 내용 추가(앞)
+			p01Tag.insertAdjacentHTML('afterbegin', '가나다라');
+
+			// 컨텐츠 영역 내용 추가(뒤)
+			p01Tag.insertAdjacentHTML('beforeend', 'abcde');
+
+			// p테그 내용 추가(전)
+			p01Tag.insertAdjacentHTML('beforebegin', '<strong>p테그-이전</strong>');
+
+			// p테그 내용 추가(후)
+			p01Tag.insertAdjacentHTML('afterend', '<strong>p테그-이후</strong>');
+		});
+	</script>
+</body>
+
+</html>
