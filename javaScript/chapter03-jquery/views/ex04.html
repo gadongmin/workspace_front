@@ -1,33 +1,48 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
 
-<title>Insert title here</title>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="../assets/js/jquery-3.7.1.js"></script>
 </head>
 
 <body>
-	
+
 	<!--속성, 속성=값-->
 	<ul>
 		<li class="first"> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </li>
 		<li class="second"> 텍스트2 텍스트2 텍스트2 텍스트2 텍스트2 </li>
-		<li > 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+		<li> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
 		<li class="first"> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </li>
 		<li class="second"> 텍스트2 텍스트2 텍스트2 텍스트2 텍스트2 </li>
-		<li > 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+		<li> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
 		<li class="first"> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </li>
 		<li class="second"> 텍스트2 텍스트2 텍스트2 텍스트2 텍스트2 </li>
-		<li > 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+		<li> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
 		<li class="first"> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </li>
 		<li class="second"> 텍스트2 텍스트2 텍스트2 텍스트2 텍스트2 </li>
-		<li > 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+		<li> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
 	</ul>
-	
+
 	<input type="text" name="id">
 	<input type="text" name="name">
 	<input type="text" name="password">
-	
+
+	<script>
+		$(document).ready(function () {
+			console.log('돔트리 완료');
+
+			let liTags = $('[class]');
+			liTags.css('color', '#ff0000');
+
+			$('[class = first]').css('color', '#0000ff');
+
+			console.log($('input[name=id]'));
+			console.log($('input[name=name]'));
+			console.log($('input[name=password]'));
+		});
+	</script>
 </body>
 
 

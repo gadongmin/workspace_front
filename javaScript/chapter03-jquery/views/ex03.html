@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-
-
-<title>Insert title here</title>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="../assets/js/jquery-3.7.1.js"></script>
 </head>
 
 <body>
-	
+
 	<!--클래스-->
 	<ul>
 		<li class="red"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
@@ -18,6 +18,17 @@
 		<li class="green"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
 	</ul>
 
+	<script>
+		$(document).ready(function () {
+			console.log('돔트리 완료');
+
+			let liTags = $('.red');
+			liTags.css('color', '#ff0000');
+			console.log(liTags);
+
+			$('.blue').css('color', '#0000ff');
+		});
+	</script>
 </body>
 
 

@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-
-
-<title>Insert title here</title>
+	<meta charset="UTF-8">
+	<script src="../assets/js/jquery-3.7.1.js"></script>
+	<title>Insert title here</title>
 </head>
 
 <body>
-	
 	<!--prepend(), append()-->
 	<p id="p1">마바사아자차카타파하</p>
 	<p id="p2">마바사아자차카타파하</p>
+
+	<script>
+		$(document).ready(function () {
+			console.log('돔트리 완료');
+
+			let p01Tag = $('#p1');
+			console.log(p01Tag);
+			p01Tag.prepend('<strong>가나다라</strong>');
+
+			let str = '<a href ="https://www.naver.com/" >(네이버)</a>';
+			let p02Tag = $('#p2');
+			console.log(p02Tag);
+			p02Tag.append(str);
+		});
+	</script>
 </body>
 
 

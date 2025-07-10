@@ -1,49 +1,125 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
 
-<title>Insert title here</title>
+<head>
+	<meta charset="UTF-8">
+	<script src="../assets/js/jquery-3.7.1.js"></script>
+	<title>Insert title here</title>
 
 	<style>
 		ul {
-			background-color: blue; 
+			background-color: blue;
 			padding: 20px;
 		}
-		
+
 		li {
 			background-color: gray;
-			border: 1px solid black; 
+			border: 1px solid black;
 		}
-		
-		
 	</style>
 
 
 </head>
+
 <body>
-	
+
 	<ul>
 		<li id="first" class="red" data-bno="1" data-pname="정우성">첫번째 아이템입니다.</li>
 		<li id="second" class="blue" data-bno="2" data-pname="정우성"><strong>두번째 아이템입니다.</strong></li>
 		<li id="third" class="del" data-bno="3" data-pname="유재석">세번째아이템입니다.</li>
 		<li data-bno="4" data-pname="박명수"><strong>네번째 아이템입니다.</strong></li>
-		
+
 	</ul>
 	<button id="btn" type="button">li요소추가</button>
 	<br>
 	<br>
-	<button id="datBtn" type="button">전체데이터수집</button>
-	
-	
-	
+	<button id="btnData" type="button">전체데이터수집</button>
+
+	<!-- -------------------------------------------------------- -->
+	<script>
+		$(document).ready(function () {
+			console.log('돔트리 완료');
+
+			let btnTag = $('#btn');
+			let ulTag = $('ul');
+
+			let str = '';
+			str += '<li data-bno="5" data-pname="김종국">다섯번째아이템입니다.</li>';
+			str += '<li data-bno="6" data-pname="이효리">여섯번째아이템입니다.</li>';
+			str += '<li data-bno="7" data-pname="이정재">일곱번째아이템입니다.</li>';
+
+			$(btnTag).on('click', function () {
+				console.log('클릭');
+				ulTag.append(str);
+			});
+
+			/*
+			// li테그(요소) 클릭했을때 
+			let liTags = $('li');
+			$(liTags).on('click', function () {
+				console.log('클릭');
+
+				let $this = $(this);
+				console.log($this.text());
+			});
+			*/
+
+			// ul테그(요소) 클릭했을때 
+			$('ul').on('click', 'li', function () {
+				let $this = $(this);
+				console.log($this.text());
+			});
+
+			// 전체데이터수집 클릭했을때 
+			$('#btnData').on('click', function () {
+				console.log('클릭');
+
+				let personList = [];
+				let liTags = $('ul>li');
+				console.log(liTags);
+
+				//js 반복문
+				// for (let i = 0; i < liTags.length; i++) {
+				// 	let name = $(liTags[i]).data('pname');
+				// 	console.log(name);
+				// }
+
+				//jquery 반복문
+				liTags.each(function (index, item) {
+					console.log(index);
+					console.log(item);
+
+					/*
+					item은 자바스크립트변수 data()룰 가지고 있지 않다.
+					item은 자바스크립트변수를 jquery용으로 변환시킨다.
+					data()는 jquery용으로 js에는 없는 함수
+					*/
+
+					let bno = $(item).data('bno');
+					let pname = $(item).data('pname');
+
+					/* this로 포장해서 사용가능
+					let $this = $(this);
+					let bno = $this.data('bno');
+					let name = $this.data('pname');
+					*/
+
+					// console.log(bno);
+					// console.log(name);
+
+					let personVO = {
+						bno: bno
+						, pname: pname
+					}
+
+					personList.push(personVO);
+				});
+
+				console.log(personList);
+			});
+
+		});
+	</script>
 </body>
-
-
-
-
-
-
-
 
 </html>

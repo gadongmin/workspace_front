@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-
-
-<title>Insert title here</title>
+	<meta charset="UTF-8">
+	<script src="../assets/js/jquery-3.7.1.js"></script>
+	<title>Insert title here</title>
 </head>
+
 <body>
-	
+
 	<!--$(this)-->
 	<ul>
 		<li id="first" class="red" data-bno="1" data-pno="5">첫번째 아이템입니다.</li>
@@ -16,7 +17,62 @@
 		<li data-bno="4" data-pno="3"><strong>네번째 아이템입니다.</strong></li>
 	</ul>
 	<button>버튼</button>
-</body>
 
+	<!-- ------------------------------------------------------------------------ -->
+	<script>
+		$(document).ready(function () {
+			console.log('돔트리 완료');
+
+			let fiTag = $('#first');
+			console.log(fiTag.attr('class'));
+			console.log(fiTag.attr('id'));
+
+			// 방법 1
+			$(fiTag).on('click', function () {
+			});
+
+			console.log('-------------------------------------------------');
+
+			// 방법 2
+			let liTags = $('li');
+			$(liTags).on('click', function () {
+				console.log('버튼'); 	 // 이벤트 확인용
+
+				let $this = $(this);	// 클릭한 li를 알려줌
+				console.log($this);
+
+				// 클릭한 li의 내용변경
+				$this.text('변경된 문구');
+
+				// 클릭한 li의 id 
+				let idTag = $this.attr('id');
+				console.log(idTag);
+				// 클릭한 li의 class 
+				let clTag = $this.attr('class');
+				console.log(clTag);
+
+				let bno = $this.data('bno');
+				// console.log(bno);
+
+				let pno = $this.data('pno');
+				// console.log(pno);
+
+				let pVO = {
+					bno: bno
+					, pno: pno
+				}
+				console.log(pVO);
+			});
+
+			/*
+			// 방법 3
+			let liTags = $('li');
+			$(liTags).on('click', function () {
+				$(this).text('변경된 문구');	// 클릭한 li를 알려줌
+			});
+			*/
+		});
+	</script>
+</body>
 
 </html>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-
-
-<title>Insert title here</title>
+	<meta charset="UTF-8">
+	<script src="../assets/js/jquery-3.7.1.js"></script>
+	<title>Insert title here</title>
 </head>
 
 <body>
@@ -12,13 +12,21 @@
 	<ul>
 		<li>첫번째 아이템입니다.</li>
 		<li>두번째 아이템입니다.</li>
-		<li class="del">삭제할  아이템입니다.</li>
+		<li class="del">삭제할 아이템입니다.</li>
 		<li>네번째 아이템입니다.</li>
-		<li class="del">삭제할  아이템입니다.</li>
+		<li class="del">삭제할 아이템입니다.</li>
 		<li>다섯 번째 아이템입니다.</li>
 	</ul>
 
-</body>
+	<script>
+		$(document).ready(function () {
+			console.log('돔트리 완료');
 
+			let liTagS = $('.del');
+			liTagS.remove();
+			liTagS.text("");
+		});
+	</script>
+</body>
 
 </html>

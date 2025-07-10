@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
 
-<title>Insert title here</title>
+<head>
+	<meta charset="UTF-8">
+	<script src="../assets/js/jquery-3.7.1.js"></script>
+	<title>Insert title here</title>
 </head>
 
 <body>
-	
+
 	<!--empty()-->
 	<ul>
 		<li class="del">첫번째 아이템입니다.</li>
@@ -17,6 +18,15 @@
 		<li>다섯번째 아이템입니다.</li>
 	</ul>
 
+	<script>
+		$(document).ready(function () {
+			console.log('돔트리 완료');
+
+			let liTags = $('.del');
+			liTags.text('');
+			liTags.empty();
+		});
+	</script>
 </body>
 
 
